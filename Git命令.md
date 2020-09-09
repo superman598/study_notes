@@ -111,6 +111,20 @@ fatal: not a git repository (or any of the parent directories): .git
 
 解决方法: 检查命令所在的位置, 是否已经进行过初始化或者克隆
 
+#### Git提交远程仓库中容易遇到的问题
+
+![image-20200909192129582](C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200909192129582.png)
+
+如果新建的远程仓库不是空的，例如你勾选了add a README.md 。 那么你通过命令
+
+`git push -u origin master`，就是会报上图中出现的问题。这是因为你新建仓库中的那个README文件不在本地仓库中，所以要先进行合并`git pull --rebase origin master`,进行合并之后，本地的仓库和新建的仓库中的内容就保持一致了。这时再进行`git push -u origin master`就可以完成推送了。
+
+
+
+
+
+
+
 
 
 ## 注意点
