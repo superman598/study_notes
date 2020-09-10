@@ -123,10 +123,6 @@ fatal: not a git repository (or any of the parent directories): .git
 
 
 
-
-
-
-
 ## 注意点
 
 1. 分支切换
@@ -143,6 +139,7 @@ fatal: not a git repository (or any of the parent directories): .git
 * git status    查看仓库的状态   红色 表示修改只在工作区, 绿色 表示修改在工作区和暂存区都存在
 * git branch        查看分支
 * git branch name   分支创建
+* git checkout -b name 创建和切换分支一步到位
 * git checkout  name 切换分支
 * git merge  name   分支合并
 * git clone     克隆仓库
@@ -150,6 +147,10 @@ fatal: not a git repository (or any of the parent directories): .git
 * git pull      更新
 * git remote    远程仓库别名管理
 * 忽略文件配置
+
+#### 成功提交远程仓库经历的阶段
+
+工作区---暂存区---本地仓库---远程仓库
 
 ## Git 仓库是不能嵌套的
 

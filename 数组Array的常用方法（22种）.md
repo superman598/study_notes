@@ -12,7 +12,7 @@ var f = [1,2,3];
 console.log(Array.isArray(f)); //true
 ```
 
-### 关于这个方法的实现
+#### 关于这个方法的实现
 
 ```js
 Array.myIsArray = function(o){
@@ -100,6 +100,31 @@ function checkAdult(age){
 ages.filter(checkAdult); // [33,20,50]
 ```
 
+#### 关于这个方法的实现
+
+```js
+Array.prototype.myFilter = function(fn){
+    var arr = [];
+    for(var i=0; i<this.length; i++){
+        if(fn(this[i],i)){
+            arr.push(this[i]);
+        }
+    }
+    return arr;
+}
+//调用
+var newArr = arr.myFilter(function(ele,index){
+    if(ele.sex == "g"){
+        return true;
+    }else{
+        return false;
+    }
+})
+console.log(newArr);
+```
+
+
+
 **Array.prototype.find()** 
 
 ```js
@@ -126,7 +151,7 @@ console.log([1,2,3].includes(2,1)); // true
 
 **Array.prototype.forEach()** 遍历方法，对数组中的每个元素都执行一次回调函数
 
-```
+```js
 // 对于空数组不会执行回调函数
 var arr = [4,9,16,25];
 arr.forEach(function(item,index){
@@ -134,7 +159,19 @@ arr.forEach(function(item,index){
 });
 ```
 
+#### 关于这个方法的实现
 
+```js
+Array.prototype.myForEach = function(fn){
+    for(var i=0; i<this.length; i++){
+        fn(this[i],i);
+    }
+}
+// 调用
+arr.myForEach(function(ele,index){
+    console.log(ele);
+})
+```
 
 ## 关于数组index的查找（2）indexOf/lastIndexOf
 
