@@ -1,11 +1,5 @@
 # 笔记
 
-## 前面的话
-1. 编辑器              -> VSCode (https://code.visualstudio.com/)
-2. 课堂文字互动        ->  QQ 群 (听懂 扣1 不懂 扣2)  
-3. 视频和作业发送方式   -> QQ 群
-4. 加我 QQ(779498590)  或 微信(xiaohigher)  备注格式 BJ200622-张岩
-
 ## 卸载密码管理工具
 ```
 git credential-manager uninstall
